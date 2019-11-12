@@ -76,11 +76,33 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc9-bd-0tg">
-                                <rect key="frame" x="20" y="103" width="38" height="30"/>
+                                <rect key="frame" x="345" y="103" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Rules"/>
                                 <connections>
                                     <segue destination="ZAM-Zi-Pfj" kind="show" id="EXV-Bh-V7n"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpU-yJ-256">
+                                <rect key="frame" x="24" y="527" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucn-C7-LlZ">
+                                <rect key="frame" x="271" y="527" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQo-Ub-gqW">
+                                <rect key="frame" x="29" y="103" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="myButtonClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tK7-nt-8bU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,6 +114,8 @@
                         <outlet property="myImageView" destination="W1Z-6D-CVu" id="CdE-xv-rSN"/>
                         <outlet property="myImageView2" destination="6F0-ak-wZ4" id="gff-M0-z8a"/>
                         <outlet property="myLabel" destination="bl6-5R-fp1" id="T04-6N-zCg"/>
+                        <outlet property="myLabelScore" destination="JpU-yJ-256" id="2f7-c3-8Bk"/>
+                        <outlet property="myLabelScore1" destination="Ucn-C7-LlZ" id="75Y-JQ-9Pc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,12 +13,50 @@ class ViewController: UIViewController
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var myImageView2: UIImageView!
     @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var myLabelScore: UILabel!
+
+    @IBOutlet weak var myLabelScore1: UILabel!
+    var myScore = 0
+    var notMyScore = 0
 
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    func setColor()
+    {
+        if myScore > notMyScore
+        {
+            myLabelScore.textColor = UIColor.green
+            myLabelScore1.textColor = UIColor.red
+        }
+        if myScore < notMyScore
+        {
+           myLabelScore.textColor = UIColor.red
+            myLabelScore1.textColor = UIColor.green
+        }
+        if myScore == notMyScore
+        {
+            myLabelScore.textColor = UIColor.black
+            myLabelScore1.textColor = UIColor.black
+        }
+    }
+    
+    func setScore()
+    {
+        if myLabel.text == "You Win"
+        {
+           myScore = myScore+1
+            myLabelScore.text = "\(myScore)"
+        }
+        if myLabel.text == "You Lose"
+        {
+           notMyScore = notMyScore+1
+            myLabelScore1.text = "\(notMyScore)"
+        }
     }
     
     func winner() -> String
@@ -93,6 +131,16 @@ class ViewController: UIViewController
     }
     
     
+    @IBAction func myButtonClear(_ sender: Any)
+    {
+       myLabelScore.text = "\(0)"
+        myLabelScore1.text = "\(0)"
+        myScore = 0
+        notMyScore = 0
+        myLabel.text = "Winner"
+        myLabelScore.textColor = UIColor.black
+        myLabelScore1.textColor = UIColor.black
+    }
     
     @IBAction func rockTap(_ sender: Any)
     {
@@ -100,6 +148,8 @@ class ViewController: UIViewController
         var picture = setPic()
         myImageView2.image = UIImage(named: picture)
         myLabel.text = winner()
+        setScore()
+        setColor()
     }
     
     @IBAction func paperTap(_ sender: Any)
@@ -108,6 +158,8 @@ class ViewController: UIViewController
         var picture = setPic()
         myImageView2.image = UIImage(named: picture)
         myLabel.text = winner()
+        setScore()
+        setColor()
     }
     
     @IBAction func scissorsTap(_ sender: Any)
@@ -116,6 +168,8 @@ class ViewController: UIViewController
         var picture = setPic()
         myImageView2.image = UIImage(named: picture)
         myLabel.text = winner()
+        setScore()
+        setColor()
         
     }
     
